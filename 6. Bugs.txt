@@ -1,0 +1,11 @@
+Bugs: 
+Create booking - on succesfull creation return Status Code 200 (should be 201 created).
+Create booking - incomplete body return Status Code 500 (should be 400 Bad Request).
+Create booking - create or post request should have authentication.
+
+Health check - on succesfull request return Status code 201 created (health check is typically 200 (OK))
+
+Delete booking - on succesfull request return Status code 201 created (should be 204 (No Content))
+Delete booking - delete a resource with a missing or invalid ID return 405 Not Allowed (should be 404 (Not Found)) 
+
+Update booking - body object does not have any field validation. on POST or PUT/PATCH request the body can be anything only if the type is correct. no validation on date...
