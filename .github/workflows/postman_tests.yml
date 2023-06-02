@@ -1,4 +1,4 @@
-name: Postman Collection Test
+name: Postman Collection Smoke Tests
 on:
   push:
     branches:
