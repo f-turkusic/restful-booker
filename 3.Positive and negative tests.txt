@@ -1,46 +1,42 @@
 ---------------------------------------------------------------------------
 Positive Test Cases:
 ---------------------------------------------------------------------------
-
 Positive: Verify successful booking creation
-
 Description: Check if a booking can be created with valid data.
 Steps:
-a. Provide valid data for creating a booking.
-b. Send a POST request to the "Booking" API endpoint.
-c. Verify that the response status code is 200 (indicating a successful booking).
-d. Verify that the booking ID in the response matches the booking ID returned in the payload.
----------------------------------------------------------------------------
-Positive: Verify successful booking retrieval
+Provide valid data for creating a booking.
+Send a POST request to the "Booking" API endpoint.
+Verify that the response status code is 200 (indicating a successful booking).
+Verify that the booking ID in the response matches the booking ID returned in the payload.
 
+Positive: Verify successful booking retrieval
 Description: Check if a booking can be retrieved successfully using its ID.
 Precondition: At least one booking exists.
 Steps:
-a. Retrieve an existing booking ID.
-b. Send a GET request to the "Booking/{bookingId}" API endpoint.
-c. Verify that the response status code is 200 (indicating a successful retrieval).
-d. Verify that the retrieved booking details match the expected data.
+Retrieve an existing booking ID.
+Send a GET request to the "Booking/{bookingId}" API endpoint.
+Verify that the response status code is 200 (indicating a successful retrieval).
+Verify that the retrieved booking details match the expected data.
 ---------------------------------------------------------------------------
 Negative Test Cases:
 ---------------------------------------------------------------------------
 Negative: Verify error handling for invalid authentication token
-
 Description: Check if the API handles invalid authentication tokens properly.
 Steps:
-a. Provide an invalid or expired authentication token.
-b. Send a request to any protected API endpoint.
-c. Verify that the response status code is 401 (indicating an unauthorized access error).
-Negative: Verify error handling for missing required data in booking creation
+Provide an invalid or expired authentication token.
+Send a request to any protected API endpoint.
+Verify that the response status code is 401 (indicating an unauthorized access error).
 
+Negative: Verify error handling for missing required data in booking creation
 Description: Check if the API properly handles requests with missing required data for booking creation.
 Steps:
-a. Send a POST request to the "Booking" API endpoint with missing or incomplete data.
-b. Verify that the response status code is 400 (indicating a bad request error).
-c. Verify that the response contains an appropriate error message indicating the missing data.
-Negative: Verify error handling for invalid booking ID in retrieval
+Send a POST request to the "Booking" API endpoint with missing or incomplete data.
+Verify that the response status code is 400 (indicating a bad request error).
+Verify that the response contains an appropriate error message indicating the missing data.
 
+Negative: Verify error handling for invalid booking ID in retrieval
 Description: Check if the API handles requests with an invalid booking ID for retrieval.
 Steps:
-a. Send a GET request to the "Booking/{invalidBookingId}" API endpoint.
-b. Verify that the response status code is 404 (indicating a not found error).
-c. Verify that the response contains an appropriate error message indicating the invalid booking ID.
+Send a GET request to the "Booking/{invalidBookingId}" API endpoint.
+Verify that the response status code is 404 (indicating a not found error).
+Verify that the response contains an appropriate error message indicating the invalid booking ID.
