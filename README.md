@@ -1,7 +1,4 @@
-# restful-booker
-Restful Booker API service tests
-
-Documentation for the API restful-booker testing.
+# Documentation for the API restful-booker testing -  how to run the automated tests.
 
 **To run automated tests for both POSTMAN and Python on your machine on local machine, you can follow these steps:**
 POSTMAN:
