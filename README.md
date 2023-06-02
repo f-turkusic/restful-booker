@@ -10,8 +10,9 @@ To run the tests manually, select the collection or individual requests, and cli
 
 Python:
 Make sure you have Python installed on your machine.
+Save script in directory from PY/api_smoke_tests.py on local machine.
 Open a terminal or command prompt and navigate to the directory containing the api_smoke_tests.py file.
-Run the script by executing the command "PY/python api_smoke_tests.py". This will execute the defined tests in the script and display the test results in the console.
+Run the script by executing the command "python api_smoke_tests.py". This will execute the defined tests in the script and display the test results in the console.
 
 **To run automated tests for both POSTMAN and Python using GitHub Actions - Workflows, you can follow these steps:**
 To manually trigger the workflow, go to the "Actions" tab in your repository on GitHub, select workflow, and click on the "Run workflow" button.
