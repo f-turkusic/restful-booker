@@ -16,10 +16,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: 3.x  # Specify the Python version you want to use
 
-      - name: Install dependencies
-        run: pip install -r PY/requirements.txt
+      - name: Install requests library
+        run: pip install requests
 
-      - name: Run tests
-        run: python PY/api_smoke_tests.py
+      - name: Run API tests
+        run: python POSTMAN/tests/api_smoke_tests.py
