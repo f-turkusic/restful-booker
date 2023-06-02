@@ -16,4 +16,4 @@ jobs:
         run: npm install -g newman
 
       - name: Run Postman collection
-        run: newman run restful-booker.herokuapp.postman_collection --environment restful-booker.herokuapp_env.postman_environment
+        run: newman run POSTMAN/restful-booker.herokuapp.postman_collection.json --environment restful-booker.herokuapp_env.postman_environment.json
