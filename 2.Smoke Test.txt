@@ -1,0 +1,17 @@
+----------------------------------------------------------------------
+Test Case: API Smoke Test
+
+Description: Verify the basic functionality of the API endpoints using a minimal set of critical test scenarios.
+Precondition: A valid token for authentication is available.
+Steps:
+Generate a new token using the "Auth" API endpoint.
+Call the "Health" API endpoint to check the health of the service.
+Verify that the response status code is 200 (indicating a successful health check).
+Create a new booking by sending a POST request to the "Booking" API endpoint with minimal valid data (e.g., essential fields like check-in and check-out dates, room details).
+Verify that the response status code is 200 (indicating a successful booking).
+Retrieve the booking details by sending a GET request to the "Booking/{bookingId}" API endpoint.
+Verify that the response status code is 200 (indicating a successful retrieval).
+Update the booking details by sending a PUT request to the "Booking/{bookingId}" API endpoint with minimal valid data (e.g., update the check-out date).
+Verify that the response status code is 200 (indicating a successful update).
+Delete the booking by sending a DELETE request to the "Booking/{bookingId}" API endpoint.
+Verify that the response status code is 201 (indicating a successful deletion).

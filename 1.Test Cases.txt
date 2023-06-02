@@ -1,0 +1,53 @@
+-------------------------------------------------------------------------
+Test Case 1: Booking a Room
+
+Description: Verify that a user can successfully book a room using the API.
+Precondition: A valid token for authentication is available.
+Steps:
+
+Generate a new token using the "Auth" API endpoint.
+Create a new booking by sending a POST request to the "Booking" API endpoint with valid data (e.g., check-in/check-out dates, room details, guest information).
+Verify that the response status code is 200 (indicating a successful booking).
+Verify that the booking ID in the response matches the booking ID returned in the payload.
+Retrieve the booking details by sending a GET request to the "Booking/{bookingId}" API endpoint.
+Verify that the retrieved booking details match the data provided during booking.
+-------------------------------------------------------------------------
+Test Case 2: Updating a Booking
+
+Description: Verify that a user can update an existing booking using the API.
+Precondition: A valid token for authentication is available, and at least one booking already exists.
+Steps:
+
+Generate a new token using the "Auth" API endpoint.
+Retrieve an existing booking by sending a GET request to the "Booking/{bookingId}" API endpoint.
+Update the booking details (e.g., change the check-in/check-out dates) in the retrieved booking data.
+Send a PUT request to the "Booking/{bookingId}" API endpoint with the updated booking data.
+Verify that the response status code is 200 (indicating a successful update).
+Retrieve the updated booking details by sending a GET request to the "Booking/{bookingId}" API endpoint.
+Verify that the retrieved booking details match the updated data.
+-------------------------------------------------------------------------
+Test Case 3: Deleting a Booking
+
+Description: Verify that a user can delete an existing booking using the API.
+Precondition: A valid token for authentication is available, and at least one booking already exists.
+Steps:
+
+Generate a new token using the "Auth" API endpoint.
+Retrieve an existing booking by sending a GET request to the "Booking/{bookingId}" API endpoint.
+Send a DELETE request to the "Booking/{bookingId}" API endpoint to delete the booking.
+Verify that the response status code is 201 (indicating a successful deletion).
+Try to retrieve the deleted booking by sending a GET request to the "Booking/{bookingId}" API endpoint.
+Verify that the response status code is 404 (indicating that the booking does not exist).
+-------------------------------------------------------------------------
+Test Case 4: Listing Bookings
+
+Description: Verify that a user can retrieve a list of bookings using the API.
+Precondition: A valid token for authentication is available, and multiple bookings already exist.
+Steps:
+
+Generate a new token using the "Auth" API endpoint.
+Send a GET request to the "Booking" API endpoint to retrieve the list of bookings.
+Verify that the response status code is 200 (indicating a successful request).
+Verify that the response contains a list of bookings.
+Verify that the retrieved bookings match the data of the existing bookings.
+-------------------------------------------------------------------------
