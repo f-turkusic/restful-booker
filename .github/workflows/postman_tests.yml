@@ -1,0 +1,19 @@
+name: Postman Collection Test
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Run Postman collection
+        run: newman run restful-booker.herokuapp.postman_collection --environment restful-booker.herokuapp_env.postman_environment
