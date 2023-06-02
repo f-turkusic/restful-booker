@@ -1,2 +1,2 @@
 # restful-booker
-Restful Booker API service
+Restful Booker API service tests
