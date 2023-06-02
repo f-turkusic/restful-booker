@@ -6,7 +6,7 @@ Description: Check if a booking can be created with valid data.
 Steps:
 Provide valid data for creating a booking.
 Send a POST request to the "Booking" API endpoint.
-Verify that the response status code is 200 (indicating a successful booking).
+Verify that the response status code is 200.
 Verify that the booking ID in the response matches the booking ID returned in the payload.
 
 Positive: Verify successful booking retrieval
@@ -15,7 +15,7 @@ Precondition: At least one booking exists.
 Steps:
 Retrieve an existing booking ID.
 Send a GET request to the "Booking/{bookingId}" API endpoint.
-Verify that the response status code is 200 (indicating a successful retrieval).
+Verify that the response status code is 200.
 Verify that the retrieved booking details match the expected data.
 ---------------------------------------------------------------------------
 Negative Test Cases:
@@ -25,18 +25,18 @@ Description: Check if the API handles invalid authentication tokens properly.
 Steps:
 Provide an invalid or expired authentication token.
 Send a request to any protected API endpoint.
-Verify that the response status code is 401 (indicating an unauthorized access error).
+Verify that the response status code is 401.
 
 Negative: Verify error handling for missing required data in booking creation
 Description: Check if the API properly handles requests with missing required data for booking creation.
 Steps:
 Send a POST request to the "Booking" API endpoint with missing or incomplete data.
-Verify that the response status code is 400 (indicating a bad request error).
+Verify that the response status code is 400.
 Verify that the response contains an appropriate error message indicating the missing data.
 
 Negative: Verify error handling for invalid booking ID in retrieval
 Description: Check if the API handles requests with an invalid booking ID for retrieval.
 Steps:
 Send a GET request to the "Booking/{invalidBookingId}" API endpoint.
-Verify that the response status code is 404 (indicating a not found error).
+Verify that the response status code is 404.
 Verify that the response contains an appropriate error message indicating the invalid booking ID.
